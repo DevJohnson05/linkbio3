@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkbioDevJohnson</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+       .kaushan-script-regular {
+        font-family: "Kaushan Script",cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+
+       body {
+            margin: 0;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .star {
+            position: absolute;
+            top: -50px;
+            width: 2px;
+            height: 100px;
+            background: linear-gradient(white, rgba(255, 255, 255, 0));
+            opacity: 0.7;
+            animation: fall 2s linear infinite;
+        }
+
+        /* Animação de queda das estrelas */
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) translateX(-200px);
+                opacity: 0;
+            }
+        }
+
+        /* Gerando várias estrelas cadentes com diferentes posições */
+        .star:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .star:nth-child(2) {
+            left: 30%;
+            animation-delay: 0.5s;
+        }
+
+        .star:nth-child(3) {
+            left: 50%;
+            animation-delay: 1s;
+        }
+
+        .star:nth-child(4) {
+            left: 70%;
+            animation-delay: 1.5s;
+        }
+
+        .star:nth-child(5) {
+            left: 90%;
+            animation-delay: 2s;
+        }
+        main{
+            background-color: #b0bec549;
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            margin: 20px auto;
+            box-sizing: border-box;
+            border-radius: 15px;
+            border:  2px solid gray;
+        }
+        .link{
+            background-color: #FFD700;
+            border-radius: 15px;
+            border:2px solid #FFFFFF ;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: "Kaushan Script";
+            text-align: center;
+            padding: 10px 20px;
+            cursor: pointer;
+            color: #FFFFFF;
+            justify-content: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .link:hover{
+            background-color: #B0BEC5
+        }
+        .link:active{
+            color: black;
+            border: 2px solid #FFD700;
+            background-color: #FFFFFF
+            
+            
+        }
+        .footer {
+            color: #B0BEC5; 
+            text-align: center;
+            text-shadow: 2px grey;
+            background-color:#FFFFFF ;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .footer > a{
+            color: #B0BEC5;
+            text-decoration: none;
+        }
+        a{
+            text-decoration: none;
+            display: block;
+            margin-top: 20px;
+            
+        }
+        #perfil{
+            margin: 0 auto;
+            background-color:#b0bec549;
+            padding: 20px 10px;
+            border-radius: 15px;
+            border: 2px solid gray;
+            text-align: center;
+        }
+        #perfil img{
+            width: 150px;
+            border-radius: 50%;
+        }
+        #perfil > h1{
+            font-size: 2rem;
+            color: white;
+            
+        }
+        #perfil > p{ 
+            font-size: 1rem;
+            color: white;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        
+            
+        
+        @media (max-width: 600px) {
+            #perfil h1 {
+                font-size: 1.5rem;
+            }
+
+            .link {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+
+            main {
+                padding: 15px;
+            }
+
+            .footer {
+                font-size: 14px;
+            }
+            
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+
+    <main>
+        <div>
+            <div id="perfil">
+                <img src="midias/icone.png" alt="" id="perfil2" >
+                <h1>Dev Johnson</h1>
+                <p>Me siga nas redes socias para acompanhar a minha evolução como programador.</p>
+            </div>
+            <div>
+                <a href="https://github.com/DevJohnson05/DevJohnson05-" target="_blank" rel="external">
+                    <p class="link"><img src="midias/icons8-github-50.png" alt="">GitHub</p>
+                </a>
+                <a href="https://www.instagram.com/devjohnson05/profilecard/?igsh=bzAyOGdmc2ZnNTBl" target="_blank" rel="external">
+                    <p class="link"><img src="midias/icons8-instagram-50.png" alt="">Instagram</p>
+                </a>
+                <a href="https://www.linkedin.com/in/vin%C3%ADcius-johnson-258988330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="external">
+                    <p class="link"><img src="midias/icons8-linkedin-50.png" alt="">linkedin</p>
+                </a>
+                <a href="https://www.tiktok.com/@dev.johnson78?_t=8qY2sFegX2s&_r=1" target="_blank" rel="external">
+                    <p class="link"><img src="midias/icons8-tik-tok-50.png" alt="">TikTok</p>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <a href="https://wa.me/559284049349">
+            <p>&copy;Dev Johnson</p>
+        </a>
+    </footer>
+</body>
+</html>
